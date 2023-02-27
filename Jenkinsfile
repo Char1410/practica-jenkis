@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage("creacion del contenedor") {
             steps{
-                sh 'docker-compose up'
+                script {
+                    dockerCompose(
+                    'up',
+                    '-d'
+                    )
+                }
             }
         }
 
