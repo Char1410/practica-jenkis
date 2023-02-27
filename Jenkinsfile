@@ -1,12 +1,11 @@
 pipeline {
-  agent {
-    docker { image 'node:16-alpine' }
-  }
-  stages {
-    stage('Test') {
-      steps {
-        sh 'node --version'
-      }
+    agent any
+    stages {
+        stage("creacion del contenedor") {
+            steps{
+                sh 'docker-compose up'
+            }
+        }
+
     }
-  }
 }
