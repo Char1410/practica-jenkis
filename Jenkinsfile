@@ -12,5 +12,11 @@ pipeline {
             }
         }
 
+        stage("verificar docker") {
+            steps{
+                sh 'docker --version'
+            }
+        }
+
     }
 }
