@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: nginx/Dockerfile
     ports: 
-      - "5050:5100"
+      - "5050:5200"
     networks:
       - internal
   php:
